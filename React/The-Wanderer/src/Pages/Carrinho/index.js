@@ -47,6 +47,7 @@ export default function Carrinho() {
                     <button className='sr' type='button'>Solicitar Reservas</button>
                 </footer>
             </section>
+            
             <div>
                 <Footer />
             </div>
