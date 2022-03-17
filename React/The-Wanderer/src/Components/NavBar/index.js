@@ -19,7 +19,6 @@ export default function NavBar() {
                 <li><Link to='/'>Home</Link></li>
                 <li><Link to='/destinos'>Destinos</Link></li>
                 <li><Link to='/promocoes'>Promoções</Link></li>
-                <li><Link to='/cadastro'>Cadastre-se</Link></li>
                 <li><Link to='/carrinho'><MdShoppingCart className='carrinho' color='deepskyblue' size='20px' /> {reserveSize.length}</Link></li>
             </ul>
         </div>
