@@ -18,6 +18,10 @@ export default function Carrinho() {
         })
     }
 
+    function passagemReservada() {
+        return alert('Passagem Reservada Com Sucesso, Viajante!!!')
+    }
+
     return (
         <div>
             <header className="capac">
@@ -44,7 +48,7 @@ export default function Carrinho() {
                 ))}
 
                 <footer className='botaomae'>
-                    <button className='sr' type='button'>Solicitar Reservas</button>
+                    <button className='sr' type='button' onClick={passagemReservada}>Solicitar Reservas</button>
                 </footer>
             </section>
             
