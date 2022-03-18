@@ -5,7 +5,7 @@ import './Card.css'
 export default function Cards(props) {
     return (
         <div>
-            <div className="cardImgContainer">
+            <div className="cardImgContainer" align="center">
                 <img className='cardImg' src={props.img} alt='CardImg' />
                 <div className='info' align='center'>
                     <h1>{props.destino}</h1>
@@ -16,7 +16,7 @@ export default function Cards(props) {
                     <Link className='Button' to='/atualizarDestino'>Atualizar</Link>
                     <Link className='Button' to='/deletarDestino'>Deletar</Link>
                 </div>
-            </div>
+            </div><br/>
         </div>
     );
 }
