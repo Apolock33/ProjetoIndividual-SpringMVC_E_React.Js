@@ -21,53 +21,53 @@ import br.com.theWandererApi.Service.DestinosService;
 @RequestMapping("/destinos")
 @RestController
 public class DestinosController {
-	
+
 	@Autowired
 	private DestinosService service;
-	
+
 	@GetMapping
-	public ResponseEntity<List<Destinos>> getAll(){
+	public ResponseEntity<List<Destinos>> getAll() {
 		return ResponseEntity.ok().body(service.getAll());
 	}
-	
+
 	@PostMapping("/add")
-	public ResponseEntity<Destinos> save(@RequestBody Destinos destinos){
+	public ResponseEntity<Destinos> save(@RequestBody Destinos destinos) {
 		try {
 			service.save(destinos);
 			return ResponseEntity.ok().body(destinos);
-		}catch (Exception ex) {
+		} catch (Exception ex) {
 			// TODO: handle exception
 			throw ex;
 		}
 	}
-	
+
 	@GetMapping("/{id}")
-	public ResponseEntity<Destinos> getById(@PathVariable Long id){
+	public ResponseEntity<Destinos> getById(@PathVariable Long id) {
 		try {
 			Destinos destinos = service.getById(id);
 			return ResponseEntity.ok().body(destinos);
-		}catch(Exception err) {
+		} catch (Exception err) {
 			throw err;
 		}
 	}
-	
+
 	@PutMapping("/{id}")
-	public ResponseEntity<Destinos> update(@RequestBody Destinos destinos){
+	public ResponseEntity<Destinos> update(@RequestBody Destinos destinos) {
 		try {
 			service.update(destinos);
 			return ResponseEntity.ok().body(destinos);
-		}catch(Exception err) {
+		} catch (Exception err) {
 			throw err;
 		}
 	}
-	
+
 	@DeleteMapping("/delete/{id}")
-	public ResponseEntity<Destinos> delete(@PathVariable Long id){
+	public ResponseEntity<Destinos> delete(@PathVariable Long id) {
 		try {
 			Destinos destinos = service.getById(id);
 			service.delete(destinos);
 			return ResponseEntity.ok().body(destinos);
-		}catch(Exception err) {
+		} catch (Exception err) {
 			throw err;
 		}
 	}
