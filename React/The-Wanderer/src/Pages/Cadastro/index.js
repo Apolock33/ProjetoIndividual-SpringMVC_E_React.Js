@@ -16,7 +16,8 @@ export default function Cadastro() {
             nome: nome.current.value,
             email: email.current.value,
             senha: senha.current.value
-        }).then(() => window.location.reload()).catch((err) => console.log(err))
+        }).then(() => window.location.reload())
+        .catch ((err) => console.log(err))
     }
 
     return (

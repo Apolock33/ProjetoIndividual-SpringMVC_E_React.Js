@@ -12,7 +12,7 @@ export default function Cards(props) {
                     <h3>Preço: {props.preco}</h3>
                 </div>
                 <div className='Botoes'>
-                   <Link className='Button' to='/criarDestino'>Criar</Link>
+                    <Link className='Button' to='/criarDestino'>Criar</Link>
                     <Link className='Button' to='/criarDestino'>Atualizar</Link>
                     <Link className='Button' to='/criarDestino'>Deletar</Link>
                 </div>
