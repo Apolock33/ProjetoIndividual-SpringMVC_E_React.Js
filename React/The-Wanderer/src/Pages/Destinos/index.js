@@ -3,6 +3,7 @@ import api from '../../services/api'
 import Footer from '../../Components/Footer';
 import NavBar from '../../Components/NavBar';
 import Cards from '../../Components/Cards/Card';
+import service from '../../services/services'
 import './Destinos.css';
 import img1 from '../../assets/1.jpg';
 import img2 from '../../assets/2.jpg';
@@ -22,6 +23,7 @@ export default function Destinos() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
   console.log(destinos);
+  
 
   return (
     <div>
@@ -45,8 +47,9 @@ export default function Destinos() {
       </div>
       <div className='cardContainer'>
         {destinos?.map((destino) => (
-          <Cards
+         <Cards
             key={destino.id}
+            id={destino.id}
             destino={destino.destino}
             img={destino.img}
             preco={destino.preco}

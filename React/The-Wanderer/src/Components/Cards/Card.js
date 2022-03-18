@@ -5,8 +5,11 @@ import './Card.css'
 export default function Cards(props) {
     return (
         <div>
+            <div className="idCards" align='center'>
+                <h3>Viagem { props.id }</h3>
+            </div>
             <div className="cardImgContainer" align="center">
-                <img className='cardImg' src={props.img} alt='CardImg' />
+               <br/> <img className='cardImg' src={props.img} alt='CardImg' />
                 <div className='info' align='center'>
                     <h1>{props.destino}</h1>
                     <h3>Preço: {props.preco}</h3>

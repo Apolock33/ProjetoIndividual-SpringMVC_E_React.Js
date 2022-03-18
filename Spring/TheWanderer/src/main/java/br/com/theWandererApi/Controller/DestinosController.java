@@ -61,7 +61,7 @@ public class DestinosController {
 		}
 	}
 
-	@DeleteMapping("/delete/{id}")
+	@DeleteMapping("/{id}")
 	public ResponseEntity<Destinos> delete(@PathVariable Long id) {
 		try {
 			Destinos destinos = service.getById(id);

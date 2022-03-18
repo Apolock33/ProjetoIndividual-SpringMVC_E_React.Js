@@ -57,6 +57,17 @@
   .Botoes .Button:hover {
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   }
+  .deleteButton {
+    border: none;
+    background-color: #36a9e1;
+    padding: 10px;
+    border-radius: 5px;
+    color: #fff;
+    font-family: "josefin";
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+  }
 }
 @media (min-width: 651px) {
   .cardImg {
@@ -116,5 +127,21 @@
   }
   .Botoes .Button:hover {
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  }
+  .deleteButton {
+    border: none;
+    background-color: #36a9e1;
+    padding: 10px;
+    border-radius: 5px;
+    color: #fff;
+    font-family: "josefin";
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .idCards h3{
+    font-family: 'josefin';
+    font-size: 25px;
+    color:#36a9e1;
   }
 }

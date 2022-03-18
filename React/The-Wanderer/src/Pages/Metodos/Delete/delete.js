@@ -5,19 +5,16 @@ import NavBar from '../../../Components/NavBar'
 import api from '../../../services/api'
 import { Link } from 'react-router-dom';
 
-export default function Update() {
+export default function Delete() {
     const id = useRef()
 
-    function update(event) {
+    function deleteById(event) {
         event.preventDefault()
-        api.delete('/destinos/delete/{id}', {
-            id: id.current.value
-        }).then(() => {
+        api.delete(`/destinos/${id}`)
+            .then(() => {
             window.location.reload()
         }).catch(err => {
             console.error(err)
-        }).then(() => {
-            alert("Seu Destino Foi Atualizado")
         })
     }
 
@@ -27,14 +24,15 @@ export default function Update() {
                 <NavBar />
             </header>
             <div className="centralização">
-                <form className="CorpoForm" onSubmit={update}>
+                <form className="CorpoForm" onSubmit={deleteById}>
                     <div className="form">
-                        <h1>Mude Seu Destino</h1><br />
+                        <h1>Escolha Seu Destino</h1><br />
                         <div className="inputs">
-                            <div className="id">
-                                <label>Id</label><br />
+                            <div className="destino">
+                                <label>Numero Da Viagem</label><br />
                                 <input required type="text" className="idInput" ref={id} /><br /><br />
                             </div>
+                            
                             <div className="botoesCreate">
                                 <input type="submit" className='submit' value='Enviar' />
                                 <Link className="link" to='/destinos'><input type='button' className="submit" value='voltar'></input></Link>
