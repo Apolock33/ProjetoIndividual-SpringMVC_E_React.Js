@@ -1,22 +1,12 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import './delete.css'
 import Footer from '../../../Components/Footer'
 import NavBar from '../../../Components/NavBar'
-import api from '../../../services/api'
+
 import { Link } from 'react-router-dom';
 
 export default function Delete() {
-    const id = useRef()
-
-    function deleteById(event) {
-        event.preventDefault()
-        api.delete(`/destinos/${id}`)
-            .then(() => {
-            window.location.reload()
-        }).catch(err => {
-            console.error(err)
-        })
-    }
+    
 
     return (
         <div className="corpoCreate">
@@ -24,13 +14,13 @@ export default function Delete() {
                 <NavBar />
             </header>
             <div className="centralização">
-                <form className="CorpoForm" onSubmit={deleteById}>
+                <form className="CorpoForm" >
                     <div className="form">
                         <h1>Escolha Seu Destino</h1><br />
                         <div className="inputs">
                             <div className="destino">
                                 <label>Numero Da Viagem</label><br />
-                                <input required type="text" className="idInput" ref={id} /><br /><br />
+                                <input required type="text" className="idInput" /><br /><br />
                             </div>
                             
                             <div className="botoesCreate">
