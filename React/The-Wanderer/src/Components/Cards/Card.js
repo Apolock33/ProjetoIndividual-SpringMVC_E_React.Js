@@ -13,8 +13,8 @@ export default function Cards(props) {
                 </div>
                 <div className='Botoes'>
                     <Link className='Button' to='/criarDestino'>Criar</Link>
-                    <Link className='Button' to='/criarDestino'>Atualizar</Link>
-                    <Link className='Button' to='/criarDestino'>Deletar</Link>
+                    <Link className='Button' to='/atualizarDestino'>Atualizar</Link>
+                    <Link className='Button' to='/deletarDestino'>Deletar</Link>
                 </div>
             </div>
         </div>

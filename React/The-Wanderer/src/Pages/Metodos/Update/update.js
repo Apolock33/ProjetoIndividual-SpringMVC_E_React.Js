@@ -1,18 +1,19 @@
 import React, { useRef } from 'react';
-import './create.css'
+import './update.css'
 import Footer from '../../../Components/Footer'
 import NavBar from '../../../Components/NavBar'
 import api from '../../../services/api'
 import { Link } from 'react-router-dom';
 
 export default function Update() {
+    const id = useRef()
     const destino = useRef()
     const img = useRef()
     const preco = useRef()
 
     function update(event) {
         event.preventDefault()
-        api.post('/destinos/{id}', {
+        api.put('/destinos/{id}', {
             id: id.current.value,
             destino: destino.current.value,
             img: img.current.value,
@@ -22,12 +23,12 @@ export default function Update() {
         }).catch(err => {
             console.error(err)
         }).then(() => {
-            alert("Seu Novo Destino Foi Cadastrado")
+            alert("Seu Destino Foi Atualizado")
         })
     }
 
     return (
-        <div className="corpoCreate">
+        <div className="corpoUpdate">
             <header>
                 <NavBar />
             </header>
@@ -52,7 +53,7 @@ export default function Update() {
                                 <label>Preço</label><br />
                                 <input required type="text" className="precoInput" ref={preco} /><br /><br />
                             </div>
-                            <div className="botoesCreate">
+                            <div className="botoesUpdate">
                                 <input type="submit" className='submit' value='Enviar' />
                                 <Link className="link" to='/destinos'><input type='button' className="submit" value='voltar'></input></Link>
                             </div>

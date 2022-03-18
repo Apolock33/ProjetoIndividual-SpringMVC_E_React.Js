@@ -10,7 +10,6 @@ import img3 from '../../assets/3.jpg';
 import img5 from '../../assets/5.jpg';
 import img6 from '../../assets/6.jpg';
 import img7 from '../../assets/7.jpg';
-import { Link } from 'react-router-dom';
 
 export default function Destinos() {
 
